@@ -26,7 +26,7 @@ Usage
 
   Examples:
 
-    # use current directory "$(pwd)" for corpus and model.
+    # use current directory "\$(pwd)" for corpus and model.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
         williamyeh/docker-word2vec  demo-word.sh
@@ -38,7 +38,7 @@ Usage
 
   Examples:
 
-    # use current directory "$(pwd)" for corpus and model.
+    # use current directory "\$(pwd)" for corpus and model.
     # [NOTE] free memory should be > 2 GiB for this task.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
@@ -51,7 +51,7 @@ Usage
 
   Examples:
 
-    # use current directory "$(pwd)" for corpus and model.
+    # use current directory "\$(pwd)" for corpus and model.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
         williamyeh/docker-word2vec  demo-classes.sh
