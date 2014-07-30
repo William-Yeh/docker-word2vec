@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 #
 # provision script; pull Docker image
 #
-docker_image = "williamyeh/docker-word2vec"
+docker_image = "williamyeh/word2vec"
 $script = <<SCRIPT
 echo Downloading Docker image: \'#{docker_image}\'...
 echo This may take minutes...

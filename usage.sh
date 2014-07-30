@@ -6,7 +6,7 @@ TIMESTAMP=`cat /var/log/DOCKER_BUILD_TIME`
 
 cat << EOF
 
-williamyeh/docker-word2vec - Docker image for word2vec.
+williamyeh/word2vec - Docker image for word2vec.
 Image built at: $TIMESTAMP
 
 Env
@@ -29,7 +29,7 @@ Usage
     # use current directory "\$(pwd)" for corpus and model.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
-        williamyeh/docker-word2vec  demo-word.sh
+        williamyeh/word2vec  demo-word.sh
 
 
 ## Demo: phrase distance
@@ -42,7 +42,7 @@ Usage
     # [NOTE] free memory should be > 2 GiB for this task.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
-        williamyeh/docker-word2vec  demo-phrases.sh
+        williamyeh/word2vec  demo-phrases.sh
 
 
 ## Demo: word clustering
@@ -54,19 +54,19 @@ Usage
     # use current directory "\$(pwd)" for corpus and model.
     $ docker run -it --rm  \\
         -v \$(pwd):/data    \\
-        williamyeh/docker-word2vec  demo-classes.sh
+        williamyeh/word2vec  demo-classes.sh
 
 
 ## List all demos available:
 
     $ docker run --rm  \\
-        williamyeh/docker-word2vec  ls -al /opt/word2vec/demo
+        williamyeh/word2vec  ls -al /opt/word2vec/demo
 
 
 ## List all native executables available:
 
     $ docker run --rm  \\
-        williamyeh/docker-word2vec  ls -al /opt/word2vec
+        williamyeh/word2vec  ls -al /opt/word2vec
 
 
 

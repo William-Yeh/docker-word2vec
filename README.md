@@ -4,11 +4,9 @@ Docker-word2vec
 
 ## Summary
 
-Repository name in Docker Hub: **[williamyeh/docker-word2vec](https://registry.hub.docker.com/u/williamyeh/docker-word2vec/)**
+Repository name in Docker Hub: **[williamyeh/word2vec](https://registry.hub.docker.com/u/williamyeh/word2vec/)**
 
-This repository contains **Dockerfile** of [word2vec](https://code.google.com/p/word2vec/) for [Docker](http://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/williamyeh/docker-word2vec/) published to the public [Docker Hub](https://hub.docker.com/).
-
-
+This repository contains Dockerized [word2vec](https://code.google.com/p/word2vec/) application, published to the public [Docker Hub](https://registry.hub.docker.com/) via **automated build** mechanism.
 
 
 
@@ -32,77 +30,11 @@ This docker image contains the following software stack:
 
 
 
-## Installation on Docker-friendly OS
-
-If you're using a Docker-friendly OS (e.g., CoreOS, Debian, Ubuntu) or Windows/MacOSX powered by [boot2docker](http://boot2docker.io/):
-
-1. Install [Docker](http://www.docker.com/), if necessary.
-
-2. Download this [automated build](https://registry.hub.docker.com/u/williamyeh/docker-word2vec/) from public [Docker Hub](https://registry.hub.docker.com/):
+## Installation
 
    ```
-   $ docker pull williamyeh/docker-word2vec
+   $ docker pull williamyeh/word2vec
    ```
-
-   (alternatively, you can build an image from Dockerfile: `docker build -t="williamyeh/docker-word2vec" github.com/William-Yeh/docker-word2vec`)
-
-
-
-## Installation on Vagrant
-
-
-### For the impatient
-
-1. Copy the `Vagrantfile` of this project to your working directory.
-
-2. Initialize and ssh into the Vagrant box:
-
-   ```
-   $ vagrant up
-   $ vagrant ssh
-   ```
-
-
-
-
-### "Docker" provider
-
-If you'd like to use the [Docker provider feature](https://www.vagrantup.com/blog/feature-preview-vagrant-1-6-docker-dev-environments.html) introduced since Vagrant 1.6:
-
-1. Place a `Vagrantfile` in your working directory like this:
-
-   ```
-   VAGRANTFILE_API_VERSION = "2"
-   DOCKER_IMAGE = "williamyeh/docker-word2vec"
-
-   Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-       config.vm.define #{DOCKER_IMAGE} do |v|
-           v.vm.provider "docker" do |d|
-               d.image = #{DOCKER_IMAGE}
-           end
-       end
-   end
-   ```
-
-
-2. Initialize the Docker container (with an implicit Vagrant box such as [mitchellh/boot2docker](https://github.com/mitchellh/boot2docker-vagrant-box), if necessary):
-
-   ```
-   $ vagrant up --provider=docker
-   ``` 
-
-3. See if Docker runs successfully:
-
-   ```
-   $ vagrant docker-logs
-   ```
-
-
-Vagrant 1.6 has also introduced Docker-related commands (e.g., `docker-logs` & `docker-run`). Consult the [official document](https://docs.vagrantup.com/v2/docker/commands.html) for more details.
-
-
-
-
 
 
 ## Usage
@@ -111,7 +43,7 @@ Vagrant 1.6 has also introduced Docker-related commands (e.g., `docker-logs` & `
 #### Show usage
 
 ```
-$ docker run --rm williamyeh/docker-word2vec
+$ docker run --rm williamyeh/word2vec
 ```
 
 
