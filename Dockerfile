@@ -48,7 +48,8 @@ RUN DEBIAN_FRONTEND=noninteractive  apt-get update  && \
     \
     rm -rf /opt/word2vec/trunk  && \
     apt-get remove -y --auto-remove subversion make gcc curl  && \
-    apt-get clean
+    apt-get clean  && \
+    rm -rf /var/lib/apt/lists/*
 
 
 #----------------------------#
