@@ -32,9 +32,9 @@ This docker image contains the following software stack:
 
 ## Installation
 
-   ```
-   $ docker pull williamyeh/word2vec
-   ```
+```shell
+docker pull williamyeh/word2vec
+```
 
 
 ## Usage
@@ -42,7 +42,7 @@ This docker image contains the following software stack:
 
 #### Show usage
 
-```
+```shell
 $ docker run --rm williamyeh/word2vec
 ```
 
